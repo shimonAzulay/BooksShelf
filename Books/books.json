@@ -1,144 +1,282 @@
-{
-  "data": [
-    {
-      "title": "Memoirs of a Geisha",
-      "body": "Arthur Golden",
-      "placeholderColor": {
-        "red": 195,
-        "green": 186,
-        "blue": 177
-      },
-      "url": "https://images.gr-assets.com/books/1388367666s/930.jpg"
+[
+  {
+    "title": "Memoirs of a Geisha",
+    "body": "Arthur Golden",
+    "placeholderColor": {
+      "red": 195,
+      "green": 186,
+      "blue": 177
     },
-    {
-      "title": "Obama's Wars",
-      "body": "Bob Woodword",
-      "placeholderColor": {
-        "red": 176,
-        "green": 119,
-        "blue": 97
-      },
-      "url": "https://www.getabstract.com/abstractData/flashFile/obamas-wars-woodward-en-14702_40x60-cb-s43rh90ft8d1g6751ioougf2gb7o6fv.jpg"
+    "url": "https://static.wikia.nocookie.net/dreamworks/images/8/81/Memoirs_of_a_Geisha_-_Poster.jpg/revision/latest?cb=20190925201548"
+  },
+  {
+    "title": "Obama's Wars",
+    "body": "Bob Woodword",
+    "placeholderColor": {
+      "red": 176,
+      "green": 119,
+      "blue": 97
     },
-    {
-      "title": "The Girl with the Pearl Earring",
-      "body": "Tracy Chevalier",
-      "placeholderColor": {
-        "red": 161,
-        "green": 126,
-        "blue": 66
-      },
-      "url": "https://images.gr-assets.com/books/1327197580s/2865.jpg"
+    "url": "https://kbimages1-a.akamaihd.net/cc46e5b8-2562-4320-a92f-4f631d34432d/1200/1200/False/obama-s-wars-3.jpg"
+  },
+  {
+    "title": "The Girl with the Pearl Earring",
+    "body": "Tracy Chevalier",
+    "placeholderColor": {
+      "red": 161,
+      "green": 126,
+      "blue": 66
     },
-    {
-      "title": "iCon: Steve Jobs",
-      "body": "Jeffrey S. Young and William L. Simon",
-      "placeholderColor": {
-        "red": 202,
-        "green": 118,
-        "blue": 46
-      },
-      "url": "https://www.getabstract.com/abstractData/flashFile/xicon-steve-jobs-young-en-5054_40x60-cb-qlj2knd3vaudy80ff1lueomk62hjalv.png.pagespeed.ic.rnirzrLudS.jpg"
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg/1200px-Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg"
+  },
+  {
+    "title": "iCon: Steve Jobs",
+    "body": "Jeffrey S. Young and William L. Simon",
+    "placeholderColor": {
+      "red": 202,
+      "green": 118,
+      "blue": 46
     },
-    {
-      "title": "iCon: Steve Jobs",
-      "body": "Jeffrey S. Young and William L. Simon",
-      "placeholderColor": {
-        "red": 202,
-        "green": 118,
-        "blue": 46
-      },
-      "url": "https://www.getabstract.com/abstractData/flashFile/xicon-steve-jobs-young-en-5054_40x60-cb-qlj2knd3vaudy80ff1lueomk62hjalv.png.pagespeed.ic.rnirzrLudS.jpg"
+    "url": "https://m.media-amazon.com/images/I/81Gh6OcerlL.jpg"
+  },
+  {
+    "title": "iCon: Steve Jobs",
+    "body": "Jeffrey S. Young and William L. Simon",
+    "placeholderColor": {
+      "red": 202,
+      "green": 118,
+      "blue": 46
     },
-    {
-      "title": "iCon: Steve Jobs",
-      "body": "Jeffrey S. Young and William L. Simon",
-      "placeholderColor": {
-        "red": 202,
-        "green": 118,
-        "blue": 46
-      },
-      "url": "https://www.getabstract.com/abstractData/flashFile/xicon-steve-jobs-young-en-5054_40x60-cb-qlj2knd3vaudy80ff1lueomk62hjalv.png.pagespeed.ic.rnirzrLudS.jpg"
+    "url": "https://m.media-amazon.com/images/I/81Gh6OcerlL.jpg"
+  },
+  {
+    "title": "iCon: Steve Jobs",
+    "body": "Jeffrey S. Young and William L. Simon",
+    "placeholderColor": {
+      "red": 202,
+      "green": 118,
+      "blue": 46
     },
-    {
-      "title": "iCon: Steve Jobs",
-      "body": "Jeffrey S. Young and William L. Simon",
-      "placeholderColor": {
-        "red": 202,
-        "green": 118,
-        "blue": 46
-      },
-      "url": "https://www.getabstract.com/abstractData/flashFile/xicon-steve-jobs-young-en-5054_40x60-cb-qlj2knd3vaudy80ff1lueomk62hjalv.png.pagespeed.ic.rnirzrLudS.jpg"
+    "url": "https://m.media-amazon.com/images/I/81Gh6OcerlL.jpg"
+  },
+  {
+    "title": "iCon: Steve Jobs",
+    "body": "Jeffrey S. Young and William L. Simon",
+    "placeholderColor": {
+      "red": 202,
+      "green": 118,
+      "blue": 46
     },
-    {
-      "title": "iCon: Steve Jobs",
-      "body": "Jeffrey S. Young and William L. Simon",
-      "placeholderColor": {
-        "red": 202,
-        "green": 118,
-        "blue": 46
-      },
-      "url": "https://www.getabstract.com/abstractData/flashFile/xicon-steve-jobs-young-en-5054_40x60-cb-qlj2knd3vaudy80ff1lueomk62hjalv.png.pagespeed.ic.rnirzrLudS.jpg"
+    "url": "https://m.media-amazon.com/images/I/81Gh6OcerlL.jpg"
+  },
+  {
+    "title": "iCon: Steve Jobs",
+    "body": "Jeffrey S. Young and William L. Simon",
+    "placeholderColor": {
+      "red": 202,
+      "green": 118,
+      "blue": 46
     },
-    {
-      "title": "iCon: Steve Jobs",
-      "body": "Jeffrey S. Young and William L. Simon",
-      "placeholderColor": {
-        "red": 202,
-        "green": 118,
-        "blue": 46
-      },
-      "url": "https://www.getabstract.com/abstractData/flashFile/xicon-steve-jobs-young-en-5054_40x60-cb-qlj2knd3vaudy80ff1lueomk62hjalv.png.pagespeed.ic.rnirzrLudS.jpg"
+    "url": "https://m.media-amazon.com/images/I/81Gh6OcerlL.jpg"
+  },
+  {
+    "title": "iCon: Steve Jobs",
+    "body": "Jeffrey S. Young and William L. Simon",
+    "placeholderColor": {
+      "red": 202,
+      "green": 118,
+      "blue": 46
     },
-    {
-      "title": "iCon: Steve Jobs",
-      "body": "Jeffrey S. Young and William L. Simon",
-      "placeholderColor": {
-        "red": 202,
-        "green": 118,
-        "blue": 46
-      },
-      "url": "https://www.getabstract.com/abstractData/flashFile/xicon-steve-jobs-young-en-5054_40x60-cb-qlj2knd3vaudy80ff1lueomk62hjalv.png.pagespeed.ic.rnirzrLudS.jpg"
+    "url": "https://m.media-amazon.com/images/I/81Gh6OcerlL.jpg"
+  },
+  {
+    "title": "iCon: Steve Jobs",
+    "body": "Jeffrey S. Young and William L. Simon",
+    "placeholderColor": {
+      "red": 202,
+      "green": 118,
+      "blue": 46
     },
-    {
-      "title": "The Girl with the Pearl Earring",
-      "body": "Tracy Chevalier",
-      "placeholderColor": {
-        "red": 161,
-        "green": 126,
-        "blue": 66
-      },
-      "url": "https://images.gr-assets.com/books/1327197580s/2865.jpg"
+    "url": "https://m.media-amazon.com/images/I/81Gh6OcerlL.jpg"
+  },
+  {
+    "title": "The Girl with the Pearl Earring",
+    "body": "Tracy Chevalier",
+    "placeholderColor": {
+      "red": 161,
+      "green": 126,
+      "blue": 66
     },
-    {
-      "title": "The Girl with the Pearl Earring",
-      "body": "Tracy Chevalier",
-      "placeholderColor": {
-        "red": 161,
-        "green": 126,
-        "blue": 66
-      },
-      "url": "https://images.gr-assets.com/books/1327197580s/2865.jpg"
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg/1200px-Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg"
+  },
+  {
+    "title": "The Girl with the Pearl Earring",
+    "body": "Tracy Chevalier",
+    "placeholderColor": {
+      "red": 161,
+      "green": 126,
+      "blue": 66
     },
-    {
-      "title": "Obama's Wars",
-      "body": "Bob Woodword",
-      "placeholderColor": {
-        "red": 176,
-        "green": 119,
-        "blue": 97
-      },
-      "url": "https://www.getabstract.com/abstractData/flashFile/obamas-wars-woodward-en-14702_40x60-cb-s43rh90ft8d1g6751ioougf2gb7o6fv.jpg"
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg/1200px-Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg"
+  },
+  {
+    "title": "Obama's Wars",
+    "body": "Bob Woodword",
+    "placeholderColor": {
+      "red": 176,
+      "green": 119,
+      "blue": 97
     },
-    {
-      "title": "Obama's Wars",
-      "body": "Bob Woodword",
-      "placeholderColor": {
-        "red": 176,
-        "green": 119,
-        "blue": 97
-      },
-      "url": "https://www.getabstract.com/abstractData/flashFile/obamas-wars-woodward-en-14702_40x60-cb-s43rh90ft8d1g6751ioougf2gb7o6fv.jpg"
-    }
-  ]
-}
+    "url": "https://kbimages1-a.akamaihd.net/cc46e5b8-2562-4320-a92f-4f631d34432d/1200/1200/False/obama-s-wars-3.jpg"
+  },
+  {
+    "title": "Obama's Wars",
+    "body": "Bob Woodword",
+    "placeholderColor": {
+      "red": 176,
+      "green": 119,
+      "blue": 97
+    },
+    "url": "https://kbimages1-a.akamaihd.net/cc46e5b8-2562-4320-a92f-4f631d34432d/1200/1200/False/obama-s-wars-3.jpg"
+  },
+  {
+    "title": "Memoirs of a Geisha",
+    "body": "Arthur Golden",
+    "placeholderColor": {
+      "red": 195,
+      "green": 186,
+      "blue": 177
+    },
+    "url": "https://static.wikia.nocookie.net/dreamworks/images/8/81/Memoirs_of_a_Geisha_-_Poster.jpg/revision/latest?cb=20190925201548"
+  },
+  {
+    "title": "Obama's Wars",
+    "body": "Bob Woodword",
+    "placeholderColor": {
+      "red": 176,
+      "green": 119,
+      "blue": 97
+    },
+    "url": "https://kbimages1-a.akamaihd.net/cc46e5b8-2562-4320-a92f-4f631d34432d/1200/1200/False/obama-s-wars-3.jpg"
+  },
+  {
+    "title": "The Girl with the Pearl Earring",
+    "body": "Tracy Chevalier",
+    "placeholderColor": {
+      "red": 161,
+      "green": 126,
+      "blue": 66
+    },
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg/1200px-Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg"
+  },
+  {
+    "title": "iCon: Steve Jobs",
+    "body": "Jeffrey S. Young and William L. Simon",
+    "placeholderColor": {
+      "red": 202,
+      "green": 118,
+      "blue": 46
+    },
+    "url": "https://m.media-amazon.com/images/I/81Gh6OcerlL.jpg"
+  },
+  {
+    "title": "iCon: Steve Jobs",
+    "body": "Jeffrey S. Young and William L. Simon",
+    "placeholderColor": {
+      "red": 202,
+      "green": 118,
+      "blue": 46
+    },
+    "url": "https://m.media-amazon.com/images/I/81Gh6OcerlL.jpg"
+  },
+  {
+    "title": "iCon: Steve Jobs",
+    "body": "Jeffrey S. Young and William L. Simon",
+    "placeholderColor": {
+      "red": 202,
+      "green": 118,
+      "blue": 46
+    },
+    "url": "https://m.media-amazon.com/images/I/81Gh6OcerlL.jpg"
+  },
+  {
+    "title": "iCon: Steve Jobs",
+    "body": "Jeffrey S. Young and William L. Simon",
+    "placeholderColor": {
+      "red": 202,
+      "green": 118,
+      "blue": 46
+    },
+    "url": "https://m.media-amazon.com/images/I/81Gh6OcerlL.jpg"
+  },
+  {
+    "title": "iCon: Steve Jobs",
+    "body": "Jeffrey S. Young and William L. Simon",
+    "placeholderColor": {
+      "red": 202,
+      "green": 118,
+      "blue": 46
+    },
+    "url": "https://m.media-amazon.com/images/I/81Gh6OcerlL.jpg"
+  },
+  {
+    "title": "iCon: Steve Jobs",
+    "body": "Jeffrey S. Young and William L. Simon",
+    "placeholderColor": {
+      "red": 202,
+      "green": 118,
+      "blue": 46
+    },
+    "url": "https://m.media-amazon.com/images/I/81Gh6OcerlL.jpg"
+  },
+  {
+    "title": "iCon: Steve Jobs",
+    "body": "Jeffrey S. Young and William L. Simon",
+    "placeholderColor": {
+      "red": 202,
+      "green": 118,
+      "blue": 46
+    },
+    "url": "https://m.media-amazon.com/images/I/81Gh6OcerlL.jpg"
+  },
+  {
+    "title": "The Girl with the Pearl Earring",
+    "body": "Tracy Chevalier",
+    "placeholderColor": {
+      "red": 161,
+      "green": 126,
+      "blue": 66
+    },
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg/1200px-Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg"
+  },
+  {
+    "title": "The Girl with the Pearl Earring",
+    "body": "Tracy Chevalier",
+    "placeholderColor": {
+      "red": 161,
+      "green": 126,
+      "blue": 66
+    },
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg/1200px-Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg"
+  },
+  {
+    "title": "Obama's Wars",
+    "body": "Bob Woodword",
+    "placeholderColor": {
+      "red": 176,
+      "green": 119,
+      "blue": 97
+    },
+    "url": "https://kbimages1-a.akamaihd.net/cc46e5b8-2562-4320-a92f-4f631d34432d/1200/1200/False/obama-s-wars-3.jpg"
+  },
+  {
+    "title": "Obama's Wars",
+    "body": "Bob Woodword",
+    "placeholderColor": {
+      "red": 176,
+      "green": 119,
+      "blue": 97
+    },
+    "url": "https://kbimages1-a.akamaihd.net/cc46e5b8-2562-4320-a92f-4f631d34432d/1200/1200/False/obama-s-wars-3.jpg"
+  }
+]

@@ -7,9 +7,8 @@
 
 import Foundation
 
-struct RGBColorModel: Codable
-{
-    var red: Int
-    var green: Int
-    var blue: Int
+struct RGBColor: Codable, Hashable {
+  let red: Int
+  let green: Int
+  let blue: Int
 }
