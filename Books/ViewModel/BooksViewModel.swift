@@ -22,7 +22,13 @@ class BooksViewModel: ObservableObject {
   let imageDataCache = ImageDataCache()
   @Published var books = [Book]()
   
-  func fetchBooks() async throws -> [Book] {
+  func fetchBooks() throws {
+    Task { @MainActor [weak self] in
+      self?.books = try await fetchBooksAsync()
+    }
+  }
+  
+  private func fetchBooksAsync() async throws -> [Book] {
     do {
       try Task.checkCancellation()
     } catch {

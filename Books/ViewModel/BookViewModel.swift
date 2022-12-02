@@ -15,7 +15,7 @@ extension BookViewModel {
   }
 }
 
-class BookViewModel {
+class BookViewModel: ObservableObject {
   private let cache: ImageDataCache
   
   // MARK: - Life Cycle
@@ -24,7 +24,15 @@ class BookViewModel {
   }
   
   // MARK: - API
-  func fetchImage(from url: URL) async throws -> Data {
+  @Published var imageData: Data?
+  
+  func fetchImage(from url: URL) throws {
+    Task { @MainActor [weak self] in
+      self?.imageData = try await fetchImageAsync(from: url)
+    }
+  }
+  
+  private func fetchImageAsync(from url: URL) async throws -> Data {
     if let data = await cache.getItem(forKey: url.absoluteString) {
       return data
     }

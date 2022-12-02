@@ -18,9 +18,9 @@ struct BooksListView: View {
         }
       }
     }
-    .task {
+    .onAppear {
       do {
-        let _ = try await viewModel.fetchBooks()
+        try viewModel.fetchBooks()
       } catch {
         print(error.localizedDescription)
       }

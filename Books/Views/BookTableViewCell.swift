@@ -10,14 +10,25 @@ import Combine
 
 class BookTableViewCell: UITableViewCell {
   static let identifier = "bookTableViewCell"
-  
+  private var cancellable: AnyCancellable?
   private lazy var bookCellView: BookCellView = {
     let view = BookCellView()
     view.translatesAutoresizingMaskIntoConstraints = false
     return view
   }()
   
-  var viewModel: BookViewModel?
+  var viewModel: BookViewModel? {
+    didSet {
+      cancellable = viewModel?.$imageData
+        .compactMap { $0 }
+        .sink { [weak self] in
+          self?.bookCellView.bookImage.image = UIImage(data: $0)
+          self?.bookCellView.titleLabel.isHidden = true
+          self?.bookCellView.authorLabel.isHidden = true
+      }
+    }
+  }
+  
   var book: Book? {
     didSet {
       DispatchQueue.main.async { [weak self] in
@@ -40,6 +51,8 @@ class BookTableViewCell: UITableViewCell {
   
   override func prepareForReuse() {
     super.prepareForReuse()
+    cancellable?.cancel()
+    cancellable = nil
     bookCellView.titleLabel.text = nil
     bookCellView.authorLabel.text = nil
     bookCellView.bookImage.image = nil
@@ -52,8 +65,8 @@ private extension BookTableViewCell {
     contentView.addSubview(bookCellView)
     bookCellView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5).isActive = true
     bookCellView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5).isActive = true
-    bookCellView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5).isActive = true
-    bookCellView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5).isActive = true
+    bookCellView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
+    bookCellView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10).isActive = true
   }
   
   func populate() {
@@ -70,15 +83,10 @@ private extension BookTableViewCell {
     guard let imageUrl = book?.url,
           let viewModel else { return }
     
-    Task { @MainActor in
-      do {
-        let imageData = try await viewModel.fetchImage(from: imageUrl)
-        bookCellView.bookImage.image = UIImage(data: imageData)
-        bookCellView.titleLabel.isHidden = true
-        bookCellView.authorLabel.isHidden = true
-      } catch {
-        print(error.localizedDescription)
-      }
+    do {
+      try viewModel.fetchImage(from: imageUrl)
+    } catch {
+      print(error.localizedDescription)
     }
   }
 }

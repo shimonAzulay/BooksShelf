@@ -10,6 +10,7 @@ import Combine
 
 class BookCollectionViewCell: UICollectionViewCell {
   static let identifier = "bookCollectionViewCell"
+  private var cancellable: AnyCancellable?
   
   // MARK: Properties
   private lazy var bookCellView: BookCellView = {
@@ -18,7 +19,18 @@ class BookCollectionViewCell: UICollectionViewCell {
     return view
   }()
   
-  var viewModel: BookViewModel?
+  var viewModel: BookViewModel? {
+    didSet {
+      cancellable = viewModel?.$imageData
+        .compactMap { $0 }
+        .sink { [weak self] in
+          self?.bookCellView.bookImage.image = UIImage(data: $0)
+          self?.bookCellView.titleLabel.isHidden = true
+          self?.bookCellView.authorLabel.isHidden = true
+      }
+    }
+  }
+  
   var book: Book? {
     didSet {
       DispatchQueue.main.async { [weak self] in
@@ -41,6 +53,8 @@ class BookCollectionViewCell: UICollectionViewCell {
   
   override func prepareForReuse() {
     super.prepareForReuse()
+    cancellable?.cancel()
+    cancellable = nil
     bookCellView.titleLabel.text = nil
     bookCellView.authorLabel.text = nil
     bookCellView.bookImage.image = nil
@@ -71,15 +85,10 @@ private extension BookCollectionViewCell {
     guard let imageUrl = book?.url,
           let viewModel else { return }
     
-    Task { @MainActor in
-      do {
-        let imageData = try await viewModel.fetchImage(from: imageUrl)
-        bookCellView.bookImage.image = UIImage(data: imageData)
-        bookCellView.titleLabel.isHidden = true
-        bookCellView.authorLabel.isHidden = true
-      } catch {
-        print(error.localizedDescription)
-      }
+    do {
+      try viewModel.fetchImage(from: imageUrl)
+    } catch {
+      print(error.localizedDescription)
     }
   }
 }

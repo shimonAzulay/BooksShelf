@@ -14,12 +14,10 @@ extension Tab {
       let flowLayout = UICollectionViewFlowLayout()
       flowLayout.sectionInset = UIEdgeInsets(top: 5, left: 15, bottom: 5, right: 15)
       flowLayout.itemSize = CGSize(width: 100, height: 150)
-      let booksCollectionViewController = BooksCollectionViewController(collectionViewLayout: flowLayout)
-      booksCollectionViewController.viewModel = viewModel
+      let booksCollectionViewController = BooksCollectionViewController(collectionViewLayout: flowLayout, viewModel: viewModel)
       return booksCollectionViewController
     case .table:
-      let booksTableViewController = BooksTableViewController()
-      booksTableViewController.viewModel = viewModel
+      let booksTableViewController = BooksTableViewController(viewModel: viewModel)
       return booksTableViewController
     case .list:
       return SwiftUIViewController.makeViewController(fromView: BooksListView(viewModel: viewModel))
