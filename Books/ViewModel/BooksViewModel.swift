@@ -41,10 +41,6 @@ class BooksViewModel: ObservableObject {
       throw BooksViewModel.Error.failedToFetchBooks
     }
     
-    DispatchQueue.main.async { [weak self] in
-      self?.books = books
-    }
-    
     return books
   }
 }
