@@ -11,10 +11,18 @@ extension Tab {
   func makeBooksViewController(viewModel: BooksViewModel) -> UIViewController {
     switch self {
     case .collection:
-      let flowLayout = UICollectionViewFlowLayout()
-      flowLayout.sectionInset = UIEdgeInsets(top: 5, left: 15, bottom: 5, right: 15)
-      flowLayout.itemSize = CGSize(width: 100, height: 150)
-      let booksCollectionViewController = BooksCollectionViewController(collectionViewLayout: flowLayout, viewModel: viewModel)
+      let inset: CGFloat = 5.0
+      let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
+                                            heightDimension: .fractionalHeight(1.0))
+      let item = NSCollectionLayoutItem(layoutSize: itemSize)
+      item.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
+      let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                             heightDimension: .fractionalHeight(0.3))
+      let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+                                                     subitems: [item])
+      let section = NSCollectionLayoutSection(group: group)
+      let layout = UICollectionViewCompositionalLayout(section: section)
+      let booksCollectionViewController = BooksCollectionViewController(collectionViewLayout: layout, viewModel: viewModel)
       return booksCollectionViewController
     case .table:
       let booksTableViewController = BooksTableViewController(viewModel: viewModel)

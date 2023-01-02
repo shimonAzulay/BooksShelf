@@ -15,10 +15,6 @@ class BooksTableViewController: UITableViewController {
   init(viewModel: BooksViewModel) {
     self.viewModel = viewModel
     super.init(style: .plain)
-    
-    cancellable = self.viewModel.objectWillChange.sink { [weak self] in
-      self?.tableView.reloadData()
-    }
   }
   
   required init(coder aDecoder: NSCoder) {
@@ -28,11 +24,16 @@ class BooksTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.register(BookTableViewCell.self, forCellReuseIdentifier: BookTableViewCell.identifier)
+    cancellable = viewModel.$books
+      .sink { [weak self] _ in
+        self?.tableView.reloadData()
+      }
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     do {
+      print("Fetching books from table")
       try viewModel.fetchBooks()
     } catch {
       print(error.localizedDescription)

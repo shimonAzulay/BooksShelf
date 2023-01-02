@@ -7,14 +7,23 @@
 
 import Foundation
 
-actor ImageDataCache {
-  private var cache = [String: Data]()
+class ImageDataCache {
+  private let cache = NSCache<NSString, NSData>()
   
-  func getItem(forKey key: String) -> Data? {
-    cache[key]
-  }
-
-  func setItem(forKey key: String, item: Data) {
-    cache[key] = item
+  subscript(key: String) -> Data? {
+    get {
+      let nsKey = key as NSString
+      guard let nsData = cache.object(forKey: nsKey) else { return nil }
+      return Data(referencing: nsData)
+    }
+    set(data) {
+      let nsKey = key as NSString
+      guard let data else {
+        cache.removeObject(forKey: nsKey)
+        return
+      }
+      let nsData = data as NSData
+      cache.setObject(nsData, forKey: nsKey)
+    }
   }
 }

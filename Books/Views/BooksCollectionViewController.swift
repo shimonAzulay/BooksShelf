@@ -13,13 +13,9 @@ class BooksCollectionViewController: UICollectionViewController {
   
   let viewModel: BooksViewModel
   
-  init(collectionViewLayout: UICollectionViewFlowLayout, viewModel: BooksViewModel) {
+  init(collectionViewLayout: UICollectionViewLayout, viewModel: BooksViewModel) {
     self.viewModel = viewModel
     super.init(collectionViewLayout: collectionViewLayout)
-    
-    cancellable = self.viewModel.objectWillChange.sink { [weak self] in
-      self?.collectionView.reloadData()
-    }
   }
   
   required init(coder aDecoder: NSCoder) {
@@ -29,11 +25,16 @@ class BooksCollectionViewController: UICollectionViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     collectionView.register(BookCollectionViewCell.self, forCellWithReuseIdentifier: BookCollectionViewCell.identifier)
+    cancellable = viewModel.$books
+      .sink { [weak self] _ in
+        self?.collectionView.reloadData()
+      }
   }
   
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)    
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     do {
+      print("Fetching books from collection")
       try viewModel.fetchBooks()
     } catch {
       print(error.localizedDescription)

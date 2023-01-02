@@ -33,7 +33,7 @@ class BookViewModel: ObservableObject {
   }
   
   private func fetchImageAsync(from url: URL) async throws -> Data {
-    if let data = await cache.getItem(forKey: url.absoluteString) {
+    if let data = cache[url.absoluteString] {
       return data
     }
 
@@ -47,7 +47,7 @@ class BookViewModel: ObservableObject {
       throw BookViewModel.Error.failedToFetchImage
     }
     
-    await cache.setItem(forKey: url.absoluteString, item: data)
+    cache[url.absoluteString] = data
     return data
   }
 }
